@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>福井県 VS 全国 (at 8am.)</title>
+<meta name="description" content="「福井県勢要覧」の統計項目について、福井県の順位を選ぶクイズアプリです。「福井県オープンデータライブラリ」で公開されている「福井県勢要覧」のオープンデータを使用しています。">
+<meta name="author" content="8am.jp">
+<meta name="keywords" content="福井県オープンデータライブラリ,HTML5,jQuery,CSS3,W3C">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="content-language" content="ja">
+<link rel="icon" type="image/png" href="./icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./icon.png">
+<!-- Bootstrap CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+<!-- Google Fonts -->
+<link rel='stylesheet' href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" type="text/css">
+<link rel="stylesheet" href="http://8am.jp/apps/lib/8am.apps.css">
+<link rel="stylesheet" href="./fukui-vs-japan.css">
+</head>
+<body>
+<div id="header">
+    <h1 id="title">福井県 VS 全国</h1>
+</div>
+
+
+<div id="dashboard">
+    <div id="preface">
+        <p>「福井県勢要覧」の統計項目について、福井県の順位を選ぶクイズアプリです。</p>
+        <p>クイズは全部で10問出題されます。正解だと思う方のボタンをクリックしてください。</p>
+
+        <h2>クイズを選ぶ</h2>
+        <div>
+            <button role="select" data-mode="ranking">
+                <p class="label">全国ランキング</p>
+                <div class="icon-container">
+                    <img src="./lib/ranking.png" class="icon">
+                </div>
+                <p class="notes">47都道府県中、福井県は何位かを選んでください。</p>
+            </button>
+            <button role="select" data-mode="vsjapan">
+                <p class="label">VS全国</p>
+                <div class="icon-container">
+                    <img src="./lib/vsjapan.png" class="icon">
+                </div>
+                <p class="notes">福井県と全国、値の高い方を選んでください。</p>
+            </button>
+        </div>
+    </div>
+
+    <div id="question">
+        <p>Q<span id="num"></span>. <span id="question-text"></span></p>
+        <p id="item"></p>
+        <p>(単位:<span id="unit"></span>)</p>
+    </div>
+
+    <div id="options"></div>
+
+    <div id="explanation">
+        <p>福井県の値は<em id="pref"></em>、47都道府県中<em id="rank"></em>位です。</p>
+    </div>
+
+    <div id="console">
+        <button id="play" role="operation">次の問題▶</button>
+    </div>
+
+    <div id="result">
+        <p>10問中<em id="score"></em>問正解でした。</p>
+        <button id="retry" role="operation">もう一度挑戦する▶</button>
+    </div>
+</div>
+
+<div id="footer">
+    <p><a href="../../play/fukui-vs-japan/" target="_parent" id="credit">このアプリについて</a></p>
+    <p>
+        このアプリは、
+        「<a href="http://www.pref.fukui.jp/doc/toukei-jouhou/opendata/index.html" rel="external">福井県オープンデータライブラリ</a>」で公開されている
+        「<a href="http://linkdata.org/work/rdf1s1912i" rel="external">福井県勢要覧</a>」のオープンデータを使用しています。
+    </p>
+    <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by/2.1/jp/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/2.1/jp/88x31.png" /></a><br />
+        この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by/2.1/jp/">クリエイティブ・コモンズ 表示 2.1 日本 ライセンスの下に提供されています。</a>
+    </p>
+</div>
+<!-- jQuery CDN -->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- Bootstrap CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script src="./fukui-vs-japan.js"></script>
+</body>
+</html>

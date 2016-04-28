@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+h1, h2 {
+    font-size: 1em;
+}
+#dashboard {
+    position: relative;
+    text-align:center;
+}
+#options {
+    width: 100%;
+    text-align:center;
+    margin: 8px auto;
+}
+button {
+    padding:2px;
+}
+button:enabled {
+    cursor:pointer;
+}
+button[role="select"],
+button[role="option"] {
+    color: white;
+    font-weight: 700;
+    background-color: #1abc9c;
+    margin: 0 1px;
+}
+button[role="option"].ranking {
+    display:block;
+    height: 50px;
+    margin: 1px auto;
+}
+button[role="option"].ranking:nth-child(1) {
+    width: 48%;
+    max-width: 300px;
+}
+button[role="option"].ranking:nth-child(2) {
+    width: 64%;
+    max-width: 400px;
+}
+button[role="option"].ranking:nth-child(3) {
+    width: 80%;
+    max-width: 500px;
+}
+button[role="option"].ranking:nth-child(4) {
+    width: 96%;
+    max-width: 600px;
+}
+
+button[role="option"].vsjapan {
+    width: 48%;
+    max-width: 300px;
+    height: 200px;
+}
+button[role="select"] {
+    width: 48%;
+    max-width: 300px;
+    height: 200px;
+}
+
+button[role="option"].selected.correct {
+    background-color: #3498db;
+}
+button[role="option"].selected.incorrect {
+    background-color: #e74c3c;
+}
+button[role="option"].unselected {
+    background-color: #95a5a6;
+}
+
+button[role="operation"] {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    width: 90%;
+    max-width: 600px;
+    height: 60px;
+    background-color: #1abc9c;
+}
+
+.icon {
+    width: 96px;
+    height: 96px;
+    margin: 4px;
+}
+
+.ranking .label {
+    font-size: 1.5em;
+    line-height: 1;
+}
+.ranking .icon-container,
+.ranking .value {
+    display:none;
+}
+
+.vsjapan .label {
+    font-size: 1.5em;
+    line-height: 1;
+}
+.vsjapan .icon-container {
+    text-align:center;
+}
+.vsjapan .value {
+    font-size: 2em;
+    line-height: 1;
+}
+button[role="select"] .label {
+    font-size: 1.5em;
+}
+button[role="select"] .notes {
+    word-wrap: break-word;
+}
+
+#score {
+    font-size: large;
+    font-style: normal;
+    color: #3498db;
+}
+
+#console {
+    text-align:center;
+}
+
+#header {
+    margin: 16px auto;
+}
+#title {
+    font-weight: 700;
+    text-align:center;
+}
+
+#footer {
+    margin: 16px auto;
+    font-size: small;
+}
+/* Media Queries */
+/* for iPhone */
+@media only screen and (max-device-width : 736px) and (orientation : portrait) {
+}
+@media only screen and (max-device-width : 736px) and (orientation : landscape) {
+}
