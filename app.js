@@ -204,7 +204,7 @@ $(function() {
     function getData() {
         var deferred = new $.Deferred;
         $.ajax(
-            "./kensei_youran.json.php",
+            "./json.php",
             {
                 dataType: "jsonp",
                 jsonpCallback: "kensei_youran"

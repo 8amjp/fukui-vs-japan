@@ -2,7 +2,7 @@
 header("Content-Type: application/json; charset=utf-8");
 
 $t = new DateTime();
-$lines = file('./kensei_youran_tsv.txt', FILE_IGNORE_NEW_LINES);
+$lines = file('http://linkdata.org/api/1/rdf1s1912i/kensei_youran_tsv.txt', FILE_IGNORE_NEW_LINES);
 $json = array();
 foreach ($lines as $line) {
   if ( !preg_match('/^#/', $line) ) {
